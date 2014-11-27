@@ -1,0 +1,44 @@
+{
+    "name": "amphp/cache",
+    "homepage": "https://github.com/amphp/cache",
+    "description": "Asynchronous caching built on the Amp concurrency framework",
+    "keywords": ["cache", "async", "amp"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Wright",
+            "email": "addr@daverandom.com",
+            "role": "Creator / Lead Developer"
+        },
+        {
+            "name": "Dan Ackroyd",
+            "email": "danack@basereality.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "amphp/amp": "~0.12"
+    },
+    "require-dev": {
+        "mockery/mockery": ">=0.9.1",
+        "rdlowrey/auryn": ">=0.13.0",
+        "predis/predis": "~0.8.6",
+        "phpunit/phpunit": "~4.1.0"
+    },
+    "suggest": {
+        "ext-apc": "Shared local caching via APC",
+        "ext-memcached": "Shared remote caching via Memcached"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amp\\Cache\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Amp\\Dns\\Test\\": "test/"
+        },
+        "files": ["test/bootstrap.php"]
+    }
+}
